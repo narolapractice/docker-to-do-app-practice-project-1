@@ -22,7 +22,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test_db
     volumes: 
-      - ./django-app-data:/var/lib/mysql
+      - django-app-data:/var/lib/mysql
     networks:
       - django-app-network
     restart: always
@@ -56,3 +56,6 @@ services:
 
 networks:
   django-app-network:
+
+volumes:
+  django-app-data:
