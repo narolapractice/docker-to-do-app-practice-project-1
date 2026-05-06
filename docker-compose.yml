@@ -34,8 +34,7 @@ services:
       start_period: 60s
 
   django:
-    build:
-      context: .
+    image: "ads754792/djangocicd-django:latest"
     container_name: django_cont
     command: sh -c "python manage.py migrate --noinput && gunicorn notesapp.wsgi --bind 0.0.0.0:8000"
     ports:
